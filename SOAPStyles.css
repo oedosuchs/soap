@@ -1,0 +1,82 @@
+body
+{
+    border: 0px solid #FAFAFA;
+    background-color: #F7F7F7;
+    vertical-align: middle;
+    text-align: center;
+    width: 1240px;
+    margin: 0 auto;
+    font-family: Tahoma;
+    font-size: 12pt;
+}
+
+
+
+.MainPanel
+{
+    border: 2px solid #000;
+    background-color: #ffffff;
+    vertical-align: middle;
+    text-align: center;
+    width: 1240px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+}
+
+.td
+{
+    text-align: left;
+    height: 25px;
+}
+
+textarea
+{
+    font-family: Tahoma;
+    font-size: 18px;
+    border: 1px solid #000;
+    min-height: 70px;
+    width: 1152px;
+    margin: 3px 0px;
+    overflow: auto;
+    resize: none;
+}
+.smalltextarea
+{
+    width: 570px !important;
+}
+
+.bigtext
+{
+    font-size: 30px;
+}
+.smalltext
+{
+    font-size: 14px;
+    text-align: left;
+    padding: 0px 5px;
+}
+.bold
+{
+    font-weight: bold;
+}
+.red
+{
+    color: Red;
+}
+input:disabled
+{
+    background: #ccc;
+    color:Black;
+}
+
+textarea:disabled
+{
+    background: #ccc;
+    color:Black;
+}
