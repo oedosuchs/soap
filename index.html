@@ -44,45 +44,59 @@ top.window.outerWidth = screen.availWidth;
 
 <script>NS_CSM_td=423677897;NS_CSM_pd=275116665;NS_CSM_u="/clm10";NS_CSM_col="af_collector_172.20.0.190";</script><script type="text/javascript">function sendTimingInfoInit(){setTimeout(sendTimingInfo,0)}function sendTimingInfo(){var wp=window.performance;if(wp){var c1,c2,t;c1=wp.timing;if(c1){var cm={};cm.ns=c1.navigationStart;if((t=c1.unloadEventStart)>0)cm.us=t;if((t=c1.unloadEventEnd)>0)cm.ue=t;if((t=c1.redirectStart)>0)cm.rs=t;if((t=c1.redirectEnd)>0)cm.re=t;cm.fs=c1.fetchStart;cm.dls=c1.domainLookupStart;cm.dle=c1.domainLookupEnd;cm.cs=c1.connectStart;cm.ce=c1.connectEnd;if((t=c1.secureConnectionStart)>0)cm.scs=t;cm.rqs=c1.requestStart;cm.rss=c1.responseStart;cm.rse=c1.responseEnd;cm.dl=c1.domLoading;cm.di=c1.domInteractive;cm.dcls=c1.domContentLoadedEventStart;cm.dcle=c1.domContentLoadedEventEnd;cm.dc=c1.domComplete;if((t=c1.loadEventStart)>0)cm.ls=t;if((t=c1.loadEventEnd)>0)cm.le=t;cm.tid=NS_CSM_td;cm.pid=NS_CSM_pd;cm.ac=NS_CSM_col;var xhttp=new XMLHttpRequest();if(xhttp){var JSON=JSON||{};JSON.stringify=JSON.stringify||function(ob){var t=typeof(ob);if(t!="object"||ob===null){if(t=="string")ob='"'+ob+'"';return String(ob);}else{var n,v,json=[],arr=(ob&&ob.constructor==Array);for(n in ob){v=ob[n];t=typeof(v);if(t=="string")v='"'+v+'"';else if(t=="object"&&v!==null)v=JSON.stringify(v);json.push((arr?"":'"'+n+'":')+String(v));}return(arr?"[":"{")+String(json)+(arr?"]":"}");}};xhttp.open("POST",NS_CSM_u,true);xhttp.send(JSON.stringify(cm));}}}}if(window.addEventListener)window.addEventListener("load",sendTimingInfoInit,false);else if(window.attachEvent)window.attachEvent("onload",sendTimingInfoInit);else window.onload=sendTimingInfoInit;</script></head>
 
+
+	
 <body>
 
     <center>
 
-        <div id="divClear" style="display: none">
-
-            <input type="button" value="Restart" onclick="cleardata();" />
+        <div id="divClear" style="padding: 10; display: none">
+          <input type="button" value="Restart" onclick="cleardata();" />
 
         </div>
 
     </center>
-
-    <table class="" cellpadding="0" cellspacing="0" runat="server" id="tblMain">
+<img align= "left" style= "padding:3px" alt="NBOME Logo" src="NoPicture.png" height="100" border="0"/></br>
+    <table runat="server" id="tblMain">
 
         <tr valign="top">
 
             <td>
 
-                <table class="MainPanel" cellpadding="0" cellspacing="0" runat="server" id="Table1">
+                <table class="MainPanel"  runat="server" id="Table1">
+					
+<td align="left" class="bigtext">
 
-                    <tr>
-
-                        <td align="left" class="td bold">
-
-                            <u>&nbsp;01/01/202X - Pod 1 AM</u><br />
-
+                          <b>SOAP Note</b>
                         </td>
+                    <tr>
+					
+                        <td align="left">
+
+<p id="displayDateTime"></p>
+								
+			<script type="text/javascript">
+  var today = new Date();
+  var day = today.getDay();
+  var daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
+  var current_date = '<b>Date :</b> '+(today.getMonth()+1)+'/'+today.getDate()+'/'+today.getFullYear()+'<br>';
+  var time = '<b>Time :</b> '+today.getHours() + ":"
+  var min = ('0'+today.getMinutes()).slice(-2);
+  var dateTime = current_date+' '+time+min;
+   
+  document.getElementById("displayDateTime").innerHTML = dateTime + ' <br><b> Day :</b> ' + daylist[day];
+ 
+  </script>						
+								
+							
+
+                         </td>
 
                         <td>
 
                         </td>
 
-                        <td align="right" rowspan="4">
-
-                            <img alt="NBOME Logo" src="nbome_logo.gif" height="100" border="0" />
-
-                            <img alt="NBOME Logo" src="NoPicture.png" height="100" border="0" />
-
-                        </td>
+                   
 
                     </tr>
 
@@ -90,35 +104,7 @@ top.window.outerWidth = screen.availWidth;
 
                         <td align="left" class="td" style="padding-left: 15px">
 
-                            <span class="bold">Room #:</span> 01
-
-                        </td>
-
-                        <td>
-
-                        </td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td align="left" class="td" style="padding-left: 15px">
-
-                            <span class="bold">Enc. #:</span> 01
-
-                        </td>
-
-                        <td>
-
-                        </td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td align="left" class="td" style="padding-left: 15px">
-
-                            <span class="bold">Routing #:</span> 1
+							<span class="bold">Room #: </span><input type="text" id="fname" name="fname">
 
                         </td>
 
@@ -132,15 +118,39 @@ top.window.outerWidth = screen.availWidth;
 
                         <td align="left" class="td" style="padding-left: 15px">
 
-                            <span class="bold">NBOME ID #:</span> 111111
+                            <span class="bold">Enc. #:</span> <input type="text" id="fname" name="fname">
 
                         </td>
 
-                        <td align="right" class="bigtext" style="padding-left: 121px;">
-
-                            <u><b>SOAP Note</b></u>
+                        <td>
 
                         </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td align="left" class="td" style="padding-left: 15px">
+
+                            <span class="bold">Routing #:</span> <input type="text" id="fname" name="fname">
+
+                        </td>
+
+                        <td>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td align="left" class="td" style="padding-left: 15px">
+
+                            <span class="bold">NBOME ID #:</span> <input type="text" id="fname" name="fname">
+
+                        </td>
+
+                       
 
                         <td align="right" style="padding-right: 10px;">
 
@@ -249,6 +259,8 @@ top.window.outerWidth = screen.availWidth;
         </tr>
 
     </table>
+<p>Original code &#169; NBOME. Code is edited and used under <em>Fair Use</em> for educational purposes by Oklahoma State University.</p>
+	 <img alt="NBOME Logo" src="nbome_logo.gif" height="100" border="0" />
 
     <div id="showSpin" style="position: absolute; top: 296px; left: 905px; display: none;">
 
